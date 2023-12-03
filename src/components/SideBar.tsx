@@ -1,15 +1,26 @@
 import useGenres from "../hooks/useGenres";
-import { Box, Text } from "@chakra-ui/react";
+import { HStack, Image, List, ListItem, Text } from "@chakra-ui/react";
+import getCroppedImageUrl from "../service/image-url";
 
 const SideBar = () => {
   const { data, erorr } = useGenres();
+
   return (
-    <Box>
+    <List>
       {erorr && <Text>{erorr}</Text>}
       {data.map((genre) => (
-        <Text>{genre.name}</Text>
+        <ListItem key={genre.id}>
+          <HStack>
+            <Image
+              boxSize="32px"
+              borderRadius={5}
+              src={getCroppedImageUrl(genre.image_background)}
+            />
+            <Text>{genre.name}</Text>
+          </HStack>
+        </ListItem>
       ))}
-    </Box>
+    </List>
   );
 };
 

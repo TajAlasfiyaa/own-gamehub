@@ -1,9 +1,7 @@
-const getCroppedImageUrl = (url: string) => {
+const getCroppedImageUrl = (url: string, crop = "600/400") => {
   const target = "media/";
   const index = url.indexOf(target) + target.length;
-  const crop = "crop/600/400/";
-  const end = url.slice(index);
-  const begin = url.slice(0, index);
-  return `${begin + crop + end}`;
+  const cropimage = url.slice(0, index) + `crop/${crop}/` + url.slice(index);
+  return cropimage;
 };
 export default getCroppedImageUrl;
