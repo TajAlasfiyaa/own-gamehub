@@ -20,8 +20,8 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        uses: npm i -g pnpm
-      - uses: pnpm i
+        run: npm i -g pnpm
+      - run: pnpm i
 
       - name: Build project
         run: npm run build
