@@ -11,9 +11,9 @@ interface Props {
 const GameCard = ({ game }: Props) => {
   const url = getCroppedImageUrl(game.background_image);
   return (
-    <Card maxW={"300px"} borderRadius={12} overflow="hidden" boxShadow="2xl">
+    <Card h={"100%"}>
       <Image src={url} />
-      <CardBody pb={53}>
+      <CardBody>
         <Heading fontSize="2xl">{game.name}</Heading>
         <HStack justifyContent="space-between">
           <PlatformIconList platforms={game.parent_platforms} />
