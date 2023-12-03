@@ -3,7 +3,8 @@ interface Props {
   score: number;
 }
 const CritickScore = ({ score }: Props) => {
-  return <Badge>{score}</Badge>;
+  const color = score > 93 ? "green" : score > 90 ? "yellow" : "red";
+  return <Badge colorScheme={color}>{score}</Badge>;
 };
 
 export default CritickScore;
