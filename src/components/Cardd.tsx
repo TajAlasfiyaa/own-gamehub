@@ -33,8 +33,8 @@ const Cardd = ({ game }: Props) => {
           <Heading size="md">Living room Sofa</Heading>
           <Text>
             This sofa is perfect for modern tropical spaces, baroque inspired
-            spaces, earthy toned spaces and for people who love a chic design
-            with a sprinkle of vintage design.
+            spaces, earthy tddddoned spaces and for people who love a chic
+            design with a sprinkle of vintage design.
           </Text>
           <Text color="blue.600" fontSize="2xl">
             $450
